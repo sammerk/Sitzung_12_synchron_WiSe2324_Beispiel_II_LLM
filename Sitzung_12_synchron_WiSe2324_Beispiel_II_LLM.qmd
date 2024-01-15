@@ -1,0 +1,211 @@
+---
+title: "Vorlesung"
+subtitle: "Einführung in qualitative und quantitative Forschungsmethoden"
+author: "Samuel Merk"
+format: 
+  revealjs:
+    auto-stretch: false
+    self-contained: true
+    slide-number: false
+    preview-links: false
+    pdf-separate-fragments: true
+    controls: true
+    logo: img/PHlogo.svg
+    theme: [simple, css/custom.scss]
+    fullscreen: true
+    pdfexport: true
+bibliography: references.bib
+csl: apa.csl
+---
+## Heutige Sitzung {.center .smaller}
+
+:::{.callout-note collapse=false appearance='default' icon=false}
+## Ziel der Sitzung {{< fa bullseye >}}
+Wiederholung Cohen's d, Cliff's d  
+Anwendung des bisher Gelernten auf ihr Wunschthema *»Belastung und Belastungsprävention im Lehrer:innenberuf«*
+:::
+
+* Darlegung
+* Wiederholung
+* Gamified Challenge
+
+```{r hidden chunk which creates template stuff}
+#| echo: false
+
+## in terminal ########
+# quarto install extension quarto-ext/fontawesome
+# quarto install extension schochastics/academicons
+#
+
+########################
+library(fontawesome)
+library(tidyverse)
+
+# Change css to lecker PH green
+if(!dir.exists("img"))
+dir.create("img")
+if(!dir.exists("css"))
+dir.create("css")
+fileConn<-file("css/custom.scss")
+writeLines(c("/*-- scss:defaults --*/",
+             "$link-color: #8cd000 !default;"), fileConn)
+close(fileConn)
+
+# create sash with URL
+sash <- 
+  ggplot() + 
+  geom_polygon(data = tibble(x = c(0,4,5.5,0),
+                             y = c(1,5,5,-.5)),
+               aes(x,y), fill = "#8cd000") + 
+  coord_fixed() +
+  annotate(geom = "text", 
+           label = " ", 
+           x = .8, y = .8, 
+           angle = 45,
+           hjust = 0, vjust = 0,
+           size = 10,
+           color = "white") +
+ theme_void() + 
+ theme(plot.margin = margin(-2,0,0,-12, unit = "cm"))
+ggsave("img/sash.svg", sash)
+```
+
+```{css}
+.callout-title {background-color: #8cd000 !important;}
+
+.imp {
+  color: #8cd000;
+}
+
+.em08{
+  font-size: .8em;
+}
+.em07{
+  font-size: .7em;
+}
+
+.em15{
+  font-size: 1.5em;
+}
+
+
+figure>figcaption {
+    margin-top: 0.5em;
+    text-align: center;
+}
+
+.citation {
+  font-size: .8em;
+  color: #8cd000;
+}
+
+
+.timevis.html-widget .vis-background .vis-minor.vis-odd {
+  background: #8CD00030;
+  }
+  
+.vis-text {
+  color: #ffffff !important;
+  }
+  
+.vis-timeline {
+  border: transparent;
+  }
+  
+.vis-item {
+  border-color: #8CD000; 
+  background-color: #8CD000; 
+  color: #ffffff !important;
+}
+
+
+
+.vis-current-time {
+  background-color: #8CD00000;
+}
+  
+```
+
+
+## Ausgewählte Treffer II {.smaller}
+»Stress within the teaching profession has a negative impact on the health and well-being of individual teachers and on retention and recruitment for the profession as a whole. There is increasing literature to suggest that Mindfulness is a useful intervention to address a variety of psychological problems, and that Mindfulness-Based Stress Reduction (MBSR) is a particularly helpful intervention for stress. We investigated the effects of teaching a MBSR course to primary school teachers to reduce stress. The MBSR course was taught to a group of primary school teachers and evaluated to establish its effects on levels of anxiety, depression, and stress, as well as movement towards a stated goal and changes in awareness. The results showed improvement for most participants for anxiety, depression, and stress, some of which were statistically significant. There were also significant improvements on two of the four dimensions of a mindfulness skills inventory. These results suggest that this approach could be a potentially cost-effective method to combat teacher stress and burnout.« [@gold2010] 
+
+## Klassifikation von  [@gold2010] {.smaller}
+
+::: {.panel-tabset}
+
+### Klassifikation
+Laden Sie sich den Artikel von Gold et al. [-@gold2010] herunter, verschaffen Sie sich 10 Minuten lang einen Überblick und klassifizieren Sie ihn entlang der gelernten Kategorien als
+
+* Deskriptive, explorative, explanative Studie
+* Querschnittliche, längsschnittliche, Trendstudie
+* Primär-, Sekundärstudie oder Metaanalyse
+* Experimentelle, quasi-experimentelle, nicht-experimentelle Studie
+
+> Wie bewerten Sie die interne und externe Validität der Studie?
+
+### Lösungsvorschlag
+
+* *»We investigated the effects of teaching a MBSR course to primary school teachers to reduce stress.«* $\Rightarrow$ explanative Fragestellung
+* längsschnittlich (*»Mehrkohorten-Messwiederholungsstichprobe«*)
+* *» The results showed **improvement** for most participants for anxiety, depression, and stress«* $\Rightarrow$ längsschnittlich 
+* *»Participants were recruited from local suburban primary schools.«* $\Rightarrow$ Primärstudie 
+* Es wird eine Intervention durchgeführt, aber es gibt keine Kontrollgruppe
+
+:::
+
+## Ausgewählte Treffer III {.smaller .scrollable}
+»This systematic review was conducted to report on developments in and implementations of mindfulness-based intervention research for in-service teachers, and the status of that research. The review reported on sixteen studies published up to 2015 from an initial search of 1788 records in PsychINFO, EBSCOhost, Education Source, Scopus, Google Scholar and Mindfulness, a major publication outlet for research in mindfulness. Dimensions of the review included research and intervention design, interventionists, intervention results, intervention fidelity, and measurement validity and reliability. Researchers of quantitative studies predominantly used a randomised-control trial design with a waitlist control group. Analysis of results revealed that (a) relatively few mindfulness-based intervention studies have been conducted, (b) interventions were provided primarily to enhance teacher wellbeing and teacher performance, (c) different definitions of mindfulness and components of practice were incorporated into descriptions of mindfulness-based interventions, (d) intervention fidelity was rarely reported, and (e) researchers seldom used both direct and indirect measures of effects. A secondary analysis was conducted of studies using qualitative methods. This highlighted in-service teachers' experiences of learning and practising mindfulness, and provided potential explanations for the effects of mindfulness-based interventions found in primary quantitative studies. The review results are discussed collectively within the framework of evidence-based practice in education. Limitations of the review and future research directions are discussed.« [@hwang2017] 
+
+## Klassifikation von [@hwang2017] {.smaller}
+
+::: {.panel-tabset}
+
+### Klassifikation 
+Laden Sie sich den Artikel von Hwang et al. [-@hwang2017] herunter, verschaffen Sie sich 10 Minuten lang einen Überblick und klassifizieren Sie ihn entlang der gelernten Kategorien als
+
+* Deskriptive, explorative, explanative Studie
+* Querschnittliche, längsschnittliche, Trendstudie
+* Primär-, Sekundärstudie oder Metaanalyse
+* Experimentelle, quasi-experimentelle, nicht-experimentelle Studie
+
+> Wie bewerten Sie die interne und externe Validität der Studie?
+
+### Lösungsvorschlag
+* *»This systematic review was conducted to report on developments in and implementations of mindfulness-based intervention research for in-service teachers, and the status of that research.«* $\Rightarrow$ Metaanalyse 
+
+:::
+
+## Ausgewählte Treffer IV {.smaller .scrollable}
+»A mindfulness intervention was conducted during the critical and formative phase of teacher training in Germany. This study aims to investigate whether early career teachers benefit from this by better coping with occupational stress and improving their practical teaching skills. In a quasi-experimental design, 42 participants’ stress, mindfulness, and occupational coping were assessed via self-reports at three time points. Additionally, teaching quality was evaluated by their students. Linear mixed-effects model analyses revealed that mindfulness-trained teachers were less stressed, more satisfied with work and, in the long run, developed better classroom management than the control group.« [@beuchel2022] 
+
+## Klassifikation von [@beuchel2022] {.smaller}
+
+::: {.panel-tabset}
+
+### Klassifikation 
+Laden Sie sich den Artikel von Beuchel et al. [-@beuchel2022] herunter, verschaffen Sie sich 10 Minuten lang einen Überblick und klassifizieren Sie ihn entlang der gelernten Kategorien als
+
+* Deskriptive, explorative, explanative Studie
+* Querschnittliche, längsschnittliche, Trendstudie
+* Primär-, Sekundärstudie oder Metaanalyse
+* Experimentelle, quasi-experimentelle, nicht-experimentelle Studie
+
+> Wie bewerten Sie die interne und externe Validität der Studie?
+
+### Lösungsvorschlag
+
+* *»This study aims to investigate whether early career teachers benefit from this by better coping with occupational stress and improving their practical teaching skills«* $\Rightarrow$ explanative Fragestellung
+* längsschnittlich (*»42 participants’ stress, mindfulness, and occupational coping were assessed via self-reports at three time points.«*)
+* *»The participants were recruited through two teacher training institutes for higher and lower secondary tracks in the German state of Baden-Württemberg between 2016 and 2018. We obtained informed consent from trainee teachers and from their students’ parents following the guidelines of Baden-Württemberg’s Ministry of Education, Youth, and Sports in advance.«* $\Rightarrow$ Primärstudie 
+* *»In a quasi-experimental design«* $\Rightarrow$ Quasiexperiment
+
+:::
+
+
+
+    
+## Literatur
+<style>
+div.callout {border-left-color: #8cd000 !important;
+</style>
