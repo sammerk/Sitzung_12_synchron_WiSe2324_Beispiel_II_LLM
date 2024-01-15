@@ -126,6 +126,16 @@ figure>figcaption {
   
 ```
 
+## Wiederholung {.incremental}
+### Darlegung
+Siehe Tafelanschrieb
+
+### Wiederholung
+Erklären Sie sich egenseitig die Koeffizienten
+
+### Gamified Challenge
+[https://bit.ly/merk126](https://bit.ly/merk126)
+
 
 ## Ausgewählte Treffer II {.smaller}
 »Stress within the teaching profession has a negative impact on the health and well-being of individual teachers and on retention and recruitment for the profession as a whole. There is increasing literature to suggest that Mindfulness is a useful intervention to address a variety of psychological problems, and that Mindfulness-Based Stress Reduction (MBSR) is a particularly helpful intervention for stress. We investigated the effects of teaching a MBSR course to primary school teachers to reduce stress. The MBSR course was taught to a group of primary school teachers and evaluated to establish its effects on levels of anxiety, depression, and stress, as well as movement towards a stated goal and changes in awareness. The results showed improvement for most participants for anxiety, depression, and stress, some of which were statistically significant. There were also significant improvements on two of the four dimensions of a mindfulness skills inventory. These results suggest that this approach could be a potentially cost-effective method to combat teacher stress and burnout.« [@gold2010] 
